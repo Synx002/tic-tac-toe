@@ -1,34 +1,87 @@
-*{
-  box-sizing: border-box;
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f9;
 }
 
-body{
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 20px;
+/* Game container */
+.game {
+  display: flex;
+  gap: 20px;
 }
 
-.square{
-  width: 35px;
-  height: 35px;
-  border: 1px solid black;
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-info {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Board and squares styling */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
   background-color: #fff;
+  border: 2px solid #888;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.square:hover {
+  background-color: #e8e8e8;
+}
+
+/* Status display */
+.status {
   font-size: 1.2rem;
   font-weight: bold;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Moves list styling */
+.game-info ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+.game-info li {
+  margin-bottom: 8px;
+}
+
+.game-info button {
+  font-size: 1rem;
+  padding: 5px 10px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.board{
-  display: flex;
-  flex-wrap: wrap;
-  width: 105px;
-  height: 105px;
-}
-
-.status{
-  margin-bottom: 10px;
-}
-
-.game{
-  display: flex;
+.game-info button:hover {
+  background-color: #45a049;
 }
